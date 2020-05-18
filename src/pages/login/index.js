@@ -35,8 +35,8 @@ class Login extends Component {
             placeholder="Password"
           />
 
-          <Link to="/cadastro">Not registred? Sing up</Link>
-          <button type="submit">submit</button>
+          <Link to="/cadastro">Not registred? Sing up.</Link>
+          <button type="submit">Sing In</button>
         </Form>
         <Route
           path="/"

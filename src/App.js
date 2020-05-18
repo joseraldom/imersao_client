@@ -6,6 +6,7 @@ import { Container, Content } from "./styles/app";
 
 import store from "./store";
 import Routes from "./routes";
+import Header from "./components/header";
 
 const App = () => {
   return (
@@ -13,6 +14,7 @@ const App = () => {
       <BrowserRouter>
         <Container>
           <Content>
+            <Header />
             <Routes />
           </Content>
         </Container>

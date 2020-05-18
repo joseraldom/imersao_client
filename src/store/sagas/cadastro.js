@@ -8,9 +8,11 @@ export function* getCadastro(action) {
   try {
     const response = yield call(api.post, "/usuarios", action.payload);
     console.log(response);
-    // yield put(CadastroActions.getLoginSuccess({ data: response, auth: true }));
+    yield put(
+      CadastroActions.getCadastroSuccess({ data: response, save: true })
+    );
   } catch (error) {
     console.log(error);
-    // yield put(CadastroActions.getLoginSuccess({ auth: false }));
+    yield put(CadastroActions.getCadastroSuccess({ save: false }));
   }
 }

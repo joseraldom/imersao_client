@@ -1,5 +1,5 @@
 import React, { Component, Fragment } from "react";
-import { Route, Link, Redirect } from "react-router-dom";
+import { Route, Redirect } from "react-router-dom";
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
 import { Creators as CadastroActions } from "../../store/ducks/cadastro";
@@ -40,8 +40,14 @@ class Cadastro extends Component {
             onChange={(e) => this.setState({ senha: e.target.value })}
             placeholder="Password"
           />
-          <button type="submit">submit</button>
+          <button type="submit">Sing Up</button>
         </Form>
+        <Route
+          path="/"
+          component={() =>
+            this.props.cadastro.save ? <Redirect to="/" /> : null
+          }
+        />
       </Fragment>
     );
   }

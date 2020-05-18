@@ -6,10 +6,28 @@ export const Form = styled.form`
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #f00;
 
   input {
     width: 70%;
     height: 33px;
+    border-radius: 5px;
+    margin-top: 5px;
+    box-shadow: none;
+    outline: none;
+    border-style: solid;
+    border-color: #138a72;
+    text-indent: 5px;
+    color: #138a72;
+  }
+
+  button {
+    margin-top: 10px;
+    width: 70%;
+    height: 35px;
+    background-color: #138a72;
+    color: #fff;
+    border-style: none;
+    border-radius: 50px;
+    cursor: pointer;
   }
 `;

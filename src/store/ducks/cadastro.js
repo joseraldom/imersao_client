@@ -7,6 +7,7 @@ const INITIAL_STATE = {
   nome: "",
   email: "",
   senha: "",
+  save: null,
 };
 
 export default function cadastro(state = INITIAL_STATE, action) {
@@ -14,7 +15,7 @@ export default function cadastro(state = INITIAL_STATE, action) {
     case Types.GET_REQUEST:
       return { ...state };
     case Types.GET_SUCCESS:
-      return { ...state, auth: action.payload.data.auth };
+      return { ...state, save: action.payload.data.save };
     default:
       return state;
   }
